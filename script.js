@@ -21,11 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(reveal);
     });
 
-    // 2. Lógica del botón "Volver arriba"
+    // 2. Lógica del botón de música
+    const musica = document.getElementById('musica-amor');
+    const musicBtn = document.getElementById('music-control');
+    const musicIcon = document.getElementById('music-icon');
+
+    if (musicBtn && musica) {
+        musicBtn.addEventListener('click', () => {
+            if (musica.paused) {
+                musica.play();
+                musicIcon.textContent = '⏸'; // Cambia a pausa
+                musicBtn.classList.add('playing');
+            } else {
+                musica.pause();
+                musicIcon.textContent = '▶'; // Cambia a play
+                musicBtn.classList.remove('playing');
+            }
+        });
+    }
+
+    // 3. Lógica del botón "Volver arriba"
     const backToTopBtn = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
-        // Mostrar el botón si el usuario ha bajado más de 500px
         if (window.scrollY > 500) {
             backToTopBtn.classList.add('show');
         } else {
@@ -33,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Acción de subir al hacer clic
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
