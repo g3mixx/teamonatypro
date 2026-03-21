@@ -1,21 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Seleccionamos todos los elementos con la clase scroll-reveal
     const reveals = document.querySelectorAll('.scroll-reveal');
 
-    const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const revealPoint = 100; // Ajustado para que aparezcan un poco antes
-
-        reveals.forEach(reveal => {
-            const revealTop = reveal.getBoundingClientRect().top;
-
-            if (revealTop < windowHeight - revealPoint) {
-                reveal.classList.add('active');
-            }
-        });
+    // Configuramos el observador
+    const observerOptions = {
+        root: document.querySelector('.snap-container'), // Observamos dentro del contenedor de scroll
+        threshold: 0.5 // Se activa cuando el 50% de la sección es visible
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    
-    // Llamada inicial para elementos que ya están en pantalla
-    revealOnScroll();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Añade la clase active para iniciar la animación CSS
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    // Le decimos al observador que vigile cada sección
+    reveals.forEach(reveal => {
+        observer.observe(reveal);
+    });
 });
