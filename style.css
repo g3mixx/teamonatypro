@@ -173,3 +173,50 @@ blockquote { font-size: 2.8rem; font-style: italic; max-width: 800px; margin: 0 
     .list-item .number { margin-bottom: 10px; }
     #back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 1.2rem; }
 }
+/* --- COPIAR AL FINAL DE TU CSS ACTUAL --- */
+
+#music-control {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Lado opuesto al botón de volver arriba */
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#music-control:hover {
+    transform: scale(1.1) translateY(-3px);
+    background-color: #b8962d;
+}
+
+/* Animación de latido cuando la música está sonando */
+#music-control.playing {
+    animation: music-pulse 2s infinite;
+}
+
+@keyframes music-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    #music-control {
+        bottom: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
