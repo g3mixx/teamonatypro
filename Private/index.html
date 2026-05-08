@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Verdad - Para Naty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body id="inicio">
+
+    <header class="hero bg-dark">
+        <div class="hero-content fade-in">
+            <p class="pre-title">Un refugio solo nuestro</p>
+            <h1>Nuestra Verdad</h1>
+            <p class="subtitle">Lo que guardo para ti.</p>
+
+            <div class="time-counters">
+                <div class="counter-item">
+                    <span class="counter-value" id="counter-algo-mas"></span>
+                    <span class="counter-label">siendo algo más que amigos</span>
+                </div>
+                <div class="counter-divider">·</div>
+                <div class="counter-item">
+                    <span class="counter-value" id="counter-novios"></span>
+                    <span class="counter-label">de novios</span>
+                </div>
+            </div>
+
+            <div class="scroll-down">↓</div>
+        </div>
+    </header>
+
+    <!-- CUENTA REGRESIVA -->
+    <section class="section-wrapper bg-dark scroll-reveal">
+        <div class="container text-center">
+            <p class="pre-title">Algo muy especial se acerca</p>
+            <h2>Nuestro primer mes juntos</h2>
+            <p style="color:#A0A0A0; margin-bottom: 50px;">El 9 de mayo cumplimos un mes, amor. Vuelve ese dia.</p>
+
+            <div class="countdown-grid" id="countdown-grid">
+                <div class="countdown-block">
+                    <span class="countdown-num" id="cd-days">00</span>
+                    <span class="countdown-unit">días</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-num" id="cd-hours">00</span>
+                    <span class="countdown-unit">horas</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-num" id="cd-minutes">00</span>
+                    <span class="countdown-unit">minutos</span>
+                </div>
+                <div class="countdown-block">
+                    <span class="countdown-num" id="cd-seconds">00</span>
+                    <span class="countdown-unit">segundos</span>
+                </div>
+            </div>
+
+            <!-- CARTA (oculta hasta que llegue el 9 de mayo) -->
+            <div class="carta-container" id="carta-container" style="display:none;">
+                <div class="carta-inner">
+                    <div class="carta-header">
+                        <p class="pre-title">9 de mayo, 2026</p>
+                        <h2 class="carta-titulo">Un mes contigo.</h2>
+                    </div>
+                    <div class="carta-body">
+                        <!-- ✏️ EDITA ESTE TEXTO CON LO QUE QUIERAS DECIRLE -->
+                        <p>Naty, amor. Hace exactamente un mes te pregunté algo que llevaba mucho tiempo guardando dentro de mí, y dijiste que sí. No sabes lo que cambió todo en ese momento, desde ese dia me hice muy feliz al saber que ya eramos novios oficialmente, si te soy sincero estaba muy nervioso, la verdad pense en la posibilidad que dijieras que no, me pase buscando muchas inspos y esa fue la que mas me gusto, hace tiempo me habias dicho que querias hacer un picnic asi super cute, y la verdad supe que esa era la mejor idea,  ya tenemos 1 mes y ha sido el mejor mes de mi vida, y hare que todos sean meses super lindos, estoy muy enamorado de ti, ya quiero esperar el dia cuando cumplamos 1 año, te amo naty, por mientras disfrutemos los meses que nos faltan hasta casarnos <3 </p>
+                        <p class="carta-firma">Con todo mi amor,<br><em>emicici</em></p>
+                    </div>
+                    <div class="carta-sello">❤</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-main scroll-reveal">
+        <div class="container music-player-container">
+            <div class="text-center">
+                <h2>Nuestra Playlist</h2>
+                <p>Dale play para acompañar este viaje con nuestra música...</p>
+            </div>
+            <div class="player-card">
+                <div class="album-art">
+                    <img id="track-img" src="foto9.jpeg" alt="Portada">
+                </div>
+                <div class="track-info">
+                    <h3 id="track-title">Cargando...</h3>
+                    <p id="track-artist">Para Naty</p>
+                </div>
+                <div class="progress-area">
+                    <input type="range" id="progress-bar" min="0" max="100" value="0">
+                    <div class="time-info">
+                        <span id="current-time">0:00</span>
+                        <span id="total-duration">0:00</span>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button id="shuffle-btn" class="ctrl-btn secondary" title="Aleatorio">🔀</button>
+                    <button id="prev-btn" class="ctrl-btn">«</button>
+                    <button id="play-btn" class="ctrl-btn play-main">▶</button>
+                    <button id="next-btn" class="ctrl-btn">»</button>
+                    <button id="loop-btn" class="ctrl-btn secondary" title="Repetir">🔁</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-alt scroll-reveal">
+        <div class="container text-center" style="max-width: 800px;">
+            <h2>Lo que te escribo en silencio</h2>
+            <p>Naty, bienvenida a este espacio top secret 🤫, de la web jeje, amor te amo mucho amorcito, son las 3 am y ya casi acabo jeje.</p>
+            <p>Este espacio es para dedicarte mis mas profundos pensamientos y cualquier cosa que me haga pensar en ti, sera un tipo blog jeje, cada que pueda le hare modificaciones y tendremos un archivo de cada cosa que escriba, te recomiendo meterte constantemente ya que cada tiempo subire nuevas songs a la playlist.</p>
+            <p>Quiero que leas esto cuando estes triste o dudes de cualquier cosa, es para recordarte cuanto te amo, cuanto te extraño y lo muy importante que eres para mi, eres el amor de esta y de todas mis vidas, TE AMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO..</p>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-main scroll-reveal">
+        <div class="container grid-section">
+            <div class="text-block">
+                <h2>Lado sad</h2>
+                <p>Gracias amor por abrirte conmigo y tenerme confianza, todo el mundo puede ver lo hermosa que eres pero yo tengo el privilegio de saber como eres en tu lado sad, es un termino que me estoy inventando xd, el lado sad es el lado que todos tenemos pero que no dejamos ver solo a la gente muy insana cercana a nosotros.</p>
+                <p>Te amo demasiado amor, no sabes lo mucho que valoro que me hayas enseñado tus miedos y temores, creeme que siempre podras contar conmigo para ayudarte, siempre cargare con tus problemas como si fueran mios, lo unico que me importa en este mundo eres tu, y siempre quiero que estes bien, admiro cada parte de ti, eres asombrosa en todos los sentidos, me gustas demasiado y estoy muy orgulloso de ti, no sabes lo demasiado fuerte que eres como para poder lidiar con todo..</p>
+            </div>
+            <div class="image-block">
+                <img src="foto1.jpeg" alt="Tu esencia" class="minimal-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-alt scroll-reveal">
+        <div class="container quote-section">
+            <blockquote>
+                "Te amaria a ti en cien vidas, en cien mundos, en cualquier versión de la realidad, te encontraría y te amaria."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9 DE ABRIL -->
+    <section class="section-wrapper bg-alt scroll-reveal">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <p class="pre-title" style="color: var(--accent);">9 de abril, 2026</p>
+                <h2>El día que te lo pregunté</h2>
+                <p style="max-width:600px; margin: 0 auto;">Hubo un día que cambió todo. Este es ese día.</p>
+            </div>
+
+            <div class="proposal-grid">
+                <div class="proposal-img-wrap">
+                    <img src="foto_abril1.jpeg" alt="9 de abril foto 1" class="minimal-img">
+                    <!-- ✏️ Reemplaza foto_abril1.jpeg con tu foto real -->
+                </div>
+                <div class="proposal-img-wrap">
+                    <img src="foto_abril2.jpeg" alt="9 de abril foto 2" class="minimal-img">
+                    <!-- ✏️ Reemplaza foto_abril2.jpeg con tu foto real -->
+                </div>
+                <div class="proposal-img-wrap">
+                    <img src="foto_abril3.jpeg" alt="9 de abril foto 3" class="minimal-img">
+                    <!-- ✏️ Reemplaza foto_abril3.jpeg con tu foto real -->
+                </div>
+            </div>
+
+
+                <div class="proposal-text">
+                    <p>Amor ese dia me desperte con una felicidad y ansiedad que no me cabia en el cuerpo jeje, todo el dia estuve pensando en el picnic y en como ibas a reaccionar, estaba super nervioso pero a la vez muy emocionado, cada vez que estoy contigo me siento en mi lugar favorito del mundo y ese dia no fue la excepcion.</p>
+                    <p>Lo del cuadro se me ocurrio porque queria que fuera algo nuestro, algo que solo tuviera sentido entre tu y yo, estuvimos pintando y yo por dentro estaba muerto de nervios xd, no sabia ni que diseño meterle al cuadro ni como hacerlo bien pero lo unico que sabia era que al final ibas a leer lo que realmente queria preguntarte, cuando llegó el momento de mostrar los cuadros el corazon literalmente se me salia.</p>
+                    <p>Cuando dijiste que si me senti el tipo mas feliz y afortunado del mundo, no exagero cuando digo que tengo oficialmente a la novia mas guapa del mundo y no lo cambio por nada, gracias por ese si amor, fue el mejor si que alguien me ha dado en la vida TE AMOOOOOOO.</p>
+                </div>
+
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-dark scroll-reveal">
+        <div class="container gallery-section">
+            <div class="gallery-header text-center">
+                <h2>Autistadas</h2>
+                <p>Valoro cada momento que pasamos juntos, desde momentos serios hasta los momentos mas autistas xd, gracias por nunca juzgarme amorcito, eres la única persona que me entiende en este mundo, jamas me juzgas y siempre me apoyas, eres mi apoyo incondicional y espero yo ser el tuyo, me encanta todos los momentos beshos que hemos pasado desde cuando nos subimos a los juegos en mi cumpleaños, cuando hicimos la capsula del tiempo o cuando jugamos ufc en la vida real, valoro cada momento a tu lado, me pone muy feliz tenerte en mi vida, ojala te vieras con mis ojos para que vieras lo mucho que me haces sentir que es inexplicable, jamas dudes de mi amor porque seria como dudar de si hay 1 grano de arena en todo el oceano y todas las playas, te adoro con todo mi corazon, quiero siempre demostrartelo amorcito.</p>
+            </div>
+            <div class="image-grid">
+                <img src="foto2.jpeg" alt="Momento íntimo 1" class="gallery-img">
+                <img src="foto3.jpeg" alt="Momento íntimo 2" class="gallery-img">
+                <img src="foto4.jpeg" alt="Momento íntimo 3" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-alt scroll-reveal">
+        <div class="container grid-section reverse">
+            <div class="text-block">
+                <h2>Nosotros mismos</h2>
+                <p>Jamas cambies amor, somos el uno para el otro, me fascina tu forma de ser, hasta la fecha todavia tengo marcado una vez que me dijiste "Como si no supieras leerme la mente iker" y creo que tienes razon, se leerte y tu sabes leerme como si nos hubieramos escrito nosotros, sabemos identificar cualquier cosa que pase y se me hace maravilloso porque significa que nos entendemos masivamente.</p>
+                <p>No tienes idea de la paz que me da saber que solo somos tu y yo, y siempre será asi, estamos hechos a la medida del otro :3 .</p>
+            </div>
+            <div class="image-block">
+                <img src="foto5.jpeg" alt="Nosotros" class="minimal-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-main scroll-reveal">
+        <div class="container list-section">
+            <div class="text-center list-header">
+                <h2>Lo que nadie más entiende</h2>
+            </div>
+            <div class="elegant-list">
+                <div class="list-item">
+                    <span class="number">01.</span>
+                    <p><strong>Nuestro propio lenguaje:</strong> Nuestra mezcla de idiomas y palabras inventadas.</p>
+                </div>
+                <div class="list-item">
+                    <span class="number">02.</span>
+                    <p><strong>El refugio de tus abrazos:</strong> Esa forma exacta en la que encajamos, y lo calido y bello que son nuestros abrazos.</p>
+                </div>
+                <div class="list-item">
+                    <span class="number">03.</span>
+                    <p><strong>Nuestras miradas:</strong> Como estamos conectados telepaticamente que nos podemos ver y entender todo a la perfeccion o reirnos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-dark scroll-reveal">
+        <div class="container gallery-section">
+            <div class="gallery-header text-center">
+                <h2>Instantes sagrados</h2>
+            </div>
+            <div class="image-grid dual-grid">
+                <img src="foto6.jpeg" alt="Instante especial 1" class="gallery-img">
+                <img src="foto7.jpeg" alt="Instante especial 2" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper bg-alt scroll-reveal">
+        <div class="container grid-section">
+            <div class="text-block">
+                <h2>Mi promesa real</h2>
+                <p>Te prometo siempre estar para ti y siempre ser tu refugio en dias malos, siempre podras contar conmigo y con mi amor.</p>
+                <p>Gracias por ser mi hogar, Naty.</p>
+            </div>
+            <div class="image-block">
+                <img src="foto8.jpeg" alt="Promesas" class="minimal-img">
+            </div>
+        </div>
+    </section>
+
+    <footer class="final-footer bg-dark scroll-reveal">
+        <h2>Te amo, con todo lo que soy.</h2>
+        <div class="signature">
+            <p>Emi</p>
+        </div>
+        <p class="date">SIEMPRE TUYO</p>
+    </footer>
+
+    <button id="back-to-top" title="Volver al inicio">↑</button>
+    <audio id="main-audio"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
